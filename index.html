@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tian Qin - Designer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.gif" alt="Tian Qin" class="profile-img">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>I'm Tian Qin, a <span class="animated-text"></span></h1>
+            <p class="bio">I'm currently a MDes student at UC Berkeley. Most of my creative work involves digital media, like VR, AR, and games, focusing on the impact of technology on people's lives and human's relationship with the physical environment and animals. I enjoy seeking inspiration for my creations while wandering.</p>
+            <p class="connect">Meet me in Berkeley or Shanghai for coffee and ice-cream, or having a Mario Party competition :D</p>
+        </section>
+
+        <section class="projects">
+            <article class="project">
+                <div class="project-showcase">
+                    <img src="assets/otter_cover.gif" alt="Otter's Adventure" class="project-img-large">
+                    <div class="project-info">
+                        <h2>Otter's Adventure</h2>
+                        <p class="project-description">A cute casual game educates players about otter conservation</p>
+                        <div class="tags">
+                            <span class="tag">#Game Design</span>
+                            <span class="tag">#Unity Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-grid">
+                    <div class="project-images">
+                        <a href="wanderlust.html" class="project-link"><img src="assets/project1-1.jpg" alt="Wanderlust Project" class="project-img"></a>
+                        <a href="wanderlust.html" class="project-link"><img src="assets/project1-2.jpg" alt="Wanderlust Project" class="project-img"></a>
+                    </div>
+                    <div class="project-info">
+                        <a href="wanderlust.html" class="project-link">
+                            <h2>WANDERLUST</h2>
+                            <p class="project-description">Take you to go for a wander with AR</p>
+                        </a>
+                        <div class="tags">
+                            <span class="tag">#Augmented Reality</span>
+                            <span class="tag">#Unity Engine</span>
+                            <span class="tag">#Walking Art</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-showcase">
+                    <img src="assets/samsara_cover.gif" alt="Samsara Project" class="project-img-large">
+                    <div class="project-info">
+                        <h2>SAMSARA</h2>
+                        <p class="project-description">An immersive experience about love, memory and eternity</p>
+                        <div class="tags">
+                            <span class="tag">#Virtual Reality</span>
+                            <span class="tag">#Unity Engine</span>
+                            <span class="tag">#Human-animal Interaction</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-grid">
+                    <div class="project-images">
+                        <img src="assets/gaze.jpg" alt="GAZE Project" class="project-img-wide">
+                    </div>
+                    <div class="project-info">
+                        <h2>GAZE</h2>
+                        <p class="project-description">When you peer into the abyss, it gazes back at you</p>
+                        <div class="tags">
+                            <span class="tag">#Artificial Intelligence</span>
+                            <span class="tag">#Interactive Installation</span>
+                            <span class="tag">#Unity Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="contact-title">Let's create together!</h2>
+            <div class="contact-links">
+                <a href="tel:+15109938225" class="contact-item">+1 5109938225</a>
+                <a href="mailto:qt@berkeley.edu" class="contact-item">qt@berkeley.edu</a>
+                <a href="https://www.linkedin.com/in/tianqin666" class="contact-item with-arrow" target="_blank" rel="noopener noreferrer">
+                    <span>Linkedin</span>
+                    <div class="arrow-icon">
+                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L22 12L12 22M2 12H22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="#" class="contact-item with-arrow">
+                    <span>Resume</span>
+                    <div class="arrow-icon">
+                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L22 12L12 22M2 12H22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const wordColors = [
+            { text: 'designer', color: '#2D3436' },
+            { text: 'XR designer', color: '#6C5CE7' },
+            { text: 'interaction designer', color: '#00B894' },
+            { text: 'UX designer', color: '#E17055' },
+            { text: 'game designer', color: '#FF7675' },
+            { text: 'creative coder', color: '#0984E3' },
+            { text: 'guitarist', color: '#E84393' },
+            { text: 'mario Party Champion', color: '#00CEC9' }
+        ];
+        
+        let currentIndex = 0;
+        const animatedText = document.querySelector('.animated-text');
+        
+        function updateText() {
+            // Start fade out
+            animatedText.classList.add('fade');
+            
+            // Wait for fade out to complete
+            setTimeout(() => {
+                const currentWord = wordColors[currentIndex];
+                animatedText.textContent = currentWord.text;
+                animatedText.style.color = currentWord.color;
+                
+                // Start fade in
+                animatedText.classList.remove('fade');
+                
+                // Update index for next iteration
+                currentIndex = (currentIndex + 1) % wordColors.length;
+            }, 200); // This timing matches the CSS transition duration
+        }
+        
+        // Initial text
+        const initialWord = wordColors[0];
+        animatedText.textContent = initialWord.text;
+        animatedText.style.color = initialWord.color;
+        
+        // Update text every second
+        setInterval(updateText, 1000);
+    </script>
+</body>
+</html> 
