@@ -158,6 +158,24 @@
     margin-top: 40px;
 }
 
+.demo-gifs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.demo-gif-wrapper {
+    width: 30vw;
+    height: 500px;
+}
+
+.demo-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 @media (max-width: 1024px) {
     .project-content {
         width: 85vw;
@@ -196,6 +214,16 @@
         font-size: 20px;
         margin-top: 80px;
         margin-bottom: 20px;
+    }
+
+    .demo-gifs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demo-gif-wrapper {
+        width: 60vw;
+        height: 400px;
     }
 }
 
