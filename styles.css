@@ -39,40 +39,61 @@ header {
     border-radius: 4px;
 }
 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
 /* Main content styles */
 main {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 180px;
-}
-
-/* Hero section */
-.hero {
-    margin-top: 60px;
-    margin-bottom: 100px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Hero section */
+.hero {
+    margin-top: 60px;
+    
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 h1 {
     font-size: 28px;
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     letter-spacing: -0.02em;
     width: 100%;
     max-width: 800px;
+    text-align: left;
 }
 
 .bio {
     font-size: 18px;
     width: 100%;
     max-width: 800px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 1.6;
     font-weight: 400;
+    text-align: left;
 }
 
 .connect {
@@ -81,6 +102,7 @@ h1 {
     max-width: 800px;
     line-height: 1.6;
     font-weight: 400;
+    text-align: left;
 }
 
 /* Projects section */
@@ -204,6 +226,7 @@ h2 {
     .hero {
         margin-top: 40px;
         margin-bottom: 60px;
+        padding-top: 170px;
     }
 
     h1 {
@@ -220,6 +243,11 @@ h2 {
 
     .project {
         margin-bottom: 80px;
+    }
+
+    .profile-photo {
+        width: 130px;
+        height: 130px;
     }
 }
 
@@ -240,6 +268,15 @@ h2 {
 
     h2 {
         font-size: 20px;
+    }
+
+    .hero {
+        padding-top: 150px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
 }
 
