@@ -98,6 +98,45 @@
     font-weight: 500;
 }
 
+.design-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
+    padding-top: 10px;
+}
+
+.inspiration-image {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.concept-image {
+    width: 360px;
+    height: auto;
+    object-fit: cover;
+    padding-top: 5px;
+}
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.design-image-container {
+    width: 100%;
+}
+
+.design-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 @media (max-width: 1024px) {
     .project-content {
         width: 85vw;
@@ -136,6 +175,11 @@
         font-size: 20px;
         margin-top: 80px;
         margin-bottom: 20px;
+    }
+
+    .design-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 
