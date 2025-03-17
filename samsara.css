@@ -221,4 +221,8 @@
     .project-title {
         font-size: 32px;
     }
+}
+
+.project-page {
+    padding-top: 70px; /* Reduced from 100px to account for narrower header */
 } 

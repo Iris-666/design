@@ -13,21 +13,28 @@
 <body>
     <header>
         <div class="logo">
-            <img src="assets/logo.gif" alt="Tian Qin" class="profile-img">
+            <a href="index.html">
+                <img src="assets/logo.gif" alt="Tian Qin" class="profile-img">
+            </a>
         </div>
+        <nav class="header-nav">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#work" class="nav-item">Work</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <img src="assets/profile.png" alt="Tian Qin Profile" class="profile-photo" style="width: 150px; height: 150px; object-fit: cover; margin-bottom: 20px; align-self: flex-start;">
             <div class="hero-text">
                 <h1>I'm Tian Qin, a <span class="animated-text"></span></h1>
-                <p class="bio">I'm currently a MDes student at UC Berkeley. Most of my creative work involves digital media, like VR, AR, and games, focusing on the impact of technology on people's lives and human's relationship with the physical environment and animals. I enjoy seeking inspiration for my creations while wandering.</p>
+                <p class="bio">I'm currently a MDes student at UC Berkeley. Most of my creative work involves digital media, like VR, AR, and games, exploring the interplay between human relationships, nature, and the physical world, creating immersive experiences that bridge the digital and real. </p>
                 <p class="connect">Meet me in Berkeley or Shanghai for coffee and ice-cream, or having a Mario Party competition :D</p>
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="work">
             <article class="project">
                 <div class="project-showcase">
                     <a href="otter.html" class="project-link">
@@ -103,7 +110,7 @@
             </article>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <h2 class="contact-title">Let's create together!</h2>
             <div class="contact-links">
                 <a href="tel:+15109938225" class="contact-item">+1 5109938225</a>
@@ -135,9 +142,7 @@
             { text: 'interaction designer', color: '#00B894' },
             { text: 'UX designer', color: '#E17055' },
             { text: 'game designer', color: '#FF7675' },
-            { text: 'creative coder', color: '#0984E3' },
-            { text: 'guitarist', color: '#E84393' },
-            { text: 'mario Party Champion', color: '#00CEC9' }
+            { text: 'creative coder', color: '#0984E3' }
         ];
         
         let currentIndex = 0;
