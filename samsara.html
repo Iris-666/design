@@ -114,6 +114,76 @@
                     <div class="design-image-container">
                         <img src="assets/samsara/design8.jpg" alt="Samsara Design Process 8" class="design-image">
                     </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design9.jpg" alt="Samsara Design Process 5" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design10.jpg" alt="Samsara Design Process 6" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design11.jpg" alt="Samsara Design Process 7" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design12.jpg" alt="Samsara Design Process 8" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design13.jpg" alt="Samsara Design Process 7" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/design14.jpg" alt="Samsara Design Process 8" class="design-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-design-section">
+                <h2 class="section-title" style="margin-top: 60px;">交互流程图</h2>
+                <div class="design-text">
+                    <p>在 3D 场景中设计交互，相比于 2D 需要考虑更多维度的复杂性。以回旋镖的交互系统为例，玩家可以从不同的角度、不同的位置、不同的力度投掷回旋镖，而每一个变量都可能影响游戏体验。因此，在 回旋镖互动 设计过程中，我们重点关注了 物理反馈、环境限制、玩家行为预测 以及 游戏逻辑的连贯性。</p>
+                    
+                    <p>在 3D 世界中，玩家不仅可以站在固定位置投掷，还可能尝试：</p>
+                    <ul class="design-list">
+                        <li>不同角度和方向的投掷：比如朝向地面、天空、围栏外等非预期区域。</li>
+                        <li>投掷力度：如果回旋镖飞行轨迹超出场景边界或落入不应交互的地方，如何处理？</li>
+                        <li>中途打断：如果玩家在投掷过程中中断动作，回旋镖如何处理回收逻辑？</li>
+                        <li>非预期行为：玩家可能尝试用回旋镖击打物体、NPC、甚至直接扔向狗狗本身，这些情况如何反馈？</li>
+                    </ul>
+
+                    <p>我们通过交互检测系统 预设了合理的行为范围，同时给予不同的即时性反馈：</p>
+                    <ul class="design-list">
+                        <li>若玩家投掷方向合理，回旋镖按照物理规则飞行并触发狗狗的反应。</li>
+                        <li>若玩家投掷超出可交互区域，系统会给出文字或视觉提示，并适当调整回旋镖返回路径，避免玩家产生迷失感。</li>
+                    </ul>
+                </div>
+
+                
+                    <div class="design-image-container">
+                        <img src="assets/samsara/frisbee_user_flow.png" alt="Samsara Design Process 1" class="design-image">
+                    </div>
+                    
+    
+                
+            </div>
+
+
+            <div class="level-design-section">
+                <h2 class="section-title" style="margin-top: 60px;">UI设计</h2>
+                
+                <div class="design-text">
+                    <p>在UI的设计中，我们特别注重设计的简洁性，力求打造一个不会破坏玩家沉浸感的界面。我们认为，极简的UI设计不仅能减少界面的视觉干扰，还能让玩家更加专注于游戏中的 3D 体验，而不是被复杂的按钮或信息框所分散注意力。</p>
+
+                    <p>为了达到这一目标，我们参考了 《塞尔达传说》 和 《Down the Rabbit Hole》 两款游戏的UI设计风格。《塞尔达传说》 的UI设计以其清晰、简洁的界面而著称，所有重要的信息都以极其直观的方式展示，且不占用过多屏幕空间。</p>
+
+                    <p>《Down the Rabbit Hole》 则通过沉浸式的设计让UI与游戏世界无缝连接。其UI风格具有一定的透明度和渐变效果，使得界面元素几乎"融入"到游戏场景中，进一步增强了玩家的沉浸感。我们将这一点作为灵感，设计了一个透明的HUD（头上显示器），只在必要时显示信息，并避免过于突兀的界面出现，从而保持玩家的沉浸感。</p>
+                </div>
+
+                <div class="design-grid">
+                    <div class="design-image-container">
+                        <img src="assets/samsara/ui1.png" alt="Samsara Design Process 1" class="design-image">
+                    </div>
+                    <div class="design-image-container">
+                        <img src="assets/samsara/ui2.png" alt="Samsara Design Process 2" class="design-image">
+                    </div>
+    
                 </div>
             </div>
         </div>
