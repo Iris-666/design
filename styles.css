@@ -145,6 +145,50 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.project[data-category] {
+    display: none;
+}
+
+.project[data-category="vr"] {
+    display: block;
+}
+
+.project-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.project-showcase .project-info {
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.project-showcase .project-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-showcase .project-img-large {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0px;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-grid {
@@ -153,18 +197,29 @@ h1 {
     gap: 20px;
     width: 100%;
     max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-grid .project-info {
+    text-align: left;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0;
 }
 
 .project-images {
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 .project-img {
     width: 280px;
     height: 500px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-img-large {
@@ -173,16 +228,16 @@ h1 {
     height: auto;
     object-fit: cover;
     margin-bottom: 0px;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-img-wide {
     width: 626px;
     height: 654px;
     object-fit: cover;
-}
-
-.project-info {
-    
+    display: block;
+    margin: 0 auto;
 }
 
 h2 {
@@ -197,14 +252,16 @@ h2 {
 .project-description {
     color: #595959;
     font-size: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 2px;
     line-height: 1.5;
+    text-align: left;
 }
 
 .tags {
     display: flex;
     flex-direction: column;
     gap: 0px;
+    text-align: left;
 }
 
 .tag {
@@ -289,6 +346,16 @@ h2 {
         width: 130px;
         height: 130px;
     }
+
+    .category-tabs {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .category-tab {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -346,6 +413,16 @@ h2 {
 
 .project-link:hover {
     opacity: 0.8;
+    text-decoration: none;
+}
+
+.project-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-info a:hover {
+    text-decoration: none;
 }
 
 .contact-section {
@@ -487,15 +564,6 @@ h2 {
 
 .category-tab.active::after {
     transform: scaleX(1);
-}
-
-.project {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.project.hidden {
-    display: none;
 }
 
 .projects-grid {

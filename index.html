@@ -50,11 +50,12 @@
                             <img src="assets/otter_cover.gif" alt="Otter's Adventure" class="project-img-large">
                         </a>
                         <div class="project-info">
-                            <a href="otter.html" class="project-link">
-                                <h2>Otter's Adventure 水獭吨吨奇遇记</h2>
-                                <p class="project-description">A cute casual game educates players about otter conservation</p>
-                            </a>
+                            
                             <div class="tags">
+                                <a href="otter.html">
+                                    <h2>Otter's Adventure 水獭吨吨奇遇记</h2>
+                                    <p class="project-description">A cute casual game educates players about otter conservation</p>
+                                </a>
                                 <span class="tag">#Game Design</span>
                                 <span class="tag">#Unity Engine</span>
                             </div>
@@ -68,11 +69,12 @@
                             <img src="assets/samsara_cover.gif" alt="Samsara Project" class="project-img-large">
                         </a>
                         <div class="project-info">
-                            <a href="samsara.html" class="project-link">
+                           
+                            <div class="tags">
+                                <a href="samsara.html">
                                 <h2>SAMSARA</h2>
                                 <p class="project-description">An immersive experience about love, memory and eternity</p>
-                            </a>
-                            <div class="tags">
+                                </a>
                                 <span class="tag">#Virtual Reality</span>
                                 <span class="tag">#Unity Engine</span>
                                 <span class="tag">#Human-animal Interaction</span>
@@ -122,17 +124,18 @@
                     </div>
                 </article>
 
-                <article class="project" data-category="vr">
+                <article class="project" data-category="ux">
                     <div class="project-showcase">
                         <a href="otter.html" class="project-link">
-                            <img src="assets/stuck_cover.png" alt="Otter's Adventure" class="project-img-large">
+                            <img src="assets/stuck_cover.png" alt="STUCK" class="project-img-large">
                         </a>
                         <div class="project-info">
-                            <a href="otter.html" class="project-link">
-                                <h2>STUCK?</h2>
-                                <p class="project-description">A mobile app that aims to help users conquer a challenge everyday</p>
-                            </a>
                             <div class="tags">
+                                <a href="otter.html">
+                                    <h2>STUCK?</h2>
+                                    <p class="project-description">A mobile app that aims to help users conquer a challenge everyday</p>
+                                </a>
+    
                                 <span class="tag">#UX Design</span>
                                 <span class="tag">#Figma</span>
                             </div>
@@ -211,6 +214,15 @@
             const categoryTabs = document.querySelectorAll('.category-tab');
             const projects = document.querySelectorAll('.project');
 
+            // Show VR projects by default
+            projects.forEach(project => {
+                if (project.getAttribute('data-category') === 'vr') {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+
             categoryTabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     // Remove active class from all tabs
@@ -221,10 +233,11 @@
                     const selectedCategory = tab.getAttribute('data-category');
 
                     projects.forEach(project => {
-                        if (selectedCategory === 'all' || project.getAttribute('data-category') === selectedCategory) {
-                            project.classList.remove('hidden');
+                        const projectCategory = project.getAttribute('data-category');
+                        if (projectCategory === selectedCategory) {
+                            project.style.display = 'block';
                         } else {
-                            project.classList.add('hidden');
+                            project.style.display = 'none';
                         }
                     });
                 });
